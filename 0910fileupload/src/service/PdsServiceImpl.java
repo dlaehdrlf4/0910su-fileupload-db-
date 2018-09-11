@@ -2,6 +2,7 @@ package service;
 
 import java.io.File;
 import java.util.Enumeration;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -68,5 +69,10 @@ public class PdsServiceImpl implements PdsService {
 				e.printStackTrace();
 			}
 			return false;
+		}
+
+		@Override
+		public List<Pds> listPds(HttpServletRequest request) {
+			return pdsDao.listPds();
 		}
 }
